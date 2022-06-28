@@ -3,29 +3,24 @@
 *{
     font-family: 'Roboto', sans-serif;
 }
-/* header section  */
-header{
-    text-align: center;
-    background: rgb(131,27,197);
-    background: linear-gradient(166deg, rgba(131,27,197,1) 29%, rgba(74,79,222,1) 100%);
-    padding: 30px 0px;
-    color: white;
+.all-Wraper{
+    position: relative;
+    height: 120vh;
 }
-header h1{
-    font-size: 4rem;
-}
-
 /* point section  */
 .show-point{
     background-color: gray;
     display: flex;
     justify-content: space-between;
     padding-bottom: 2px;
+    align-items: center;
 }
 .point-section{
     display: flex;
     justify-content: center;
     align-items: center;
+    position: sticky;
+    top: 0px;
 }
 .point-section h3{
     font-size: 3rem;
@@ -63,11 +58,69 @@ main{
 transform:scale(1.3);
 cursor: pointer;
 }
+
 .show-images img{
 width: 60%;
 }
 #who-win{
-    background-color: #F8496D;
+    /* background-color: #F8496D;
     padding: 20px;
-    color: white;
+    color: white; */
 }
+
+footer{
+    width: 100%;
+    text-align: center;
+    background: rgb(131,27,197);
+    background: linear-gradient(166deg, rgba(131,27,197,1) 29%, rgba(74,79,222,1) 100%);
+    padding: 30px 0px;
+    color: white;
+    position: absolute;
+    bottom: 0px;
+}
+footer h1{
+    font-size: 4rem;
+}
+.container{
+    position: relative;
+    bottom: 100px;
+    top: 100px;
+}
+
+/* media query  */
+@media only screen and (max-width: 678px) {
+    .point-section h3{
+        font-size: 1.5rem;
+        font-weight: 700;
+        
+    }
+    .button-show button{
+        margin: 0px 10px;
+        border: none;
+        padding: 9px 20px;
+        font-size: 1.3rem;
+    }
+    footer h1{
+        font-size: 2rem;
+    }
+    .number-show{
+        border: 2px solid white;
+        padding: 4px 10px;
+        background-color: black;
+        color: white;
+        box-shadow: 0px 3px 10px 1px grey;
+    }
+    .who-wins{
+        font-size: 1.2rem;
+    }
+    .all-Wraper{
+        position: relative;
+        height: 100vh;
+    }
+    container{
+        position: relative;
+        bottom: 10px;
+        top: 10px;
+    }
+  }
+  

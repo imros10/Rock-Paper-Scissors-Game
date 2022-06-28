@@ -8,25 +8,24 @@
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
-   <!-- header section  -->
-   <header>
-    <h1>Rock, Paper, Scissors Game</h1>
-    <h4>Developed By Imros</h4>
-   </header>
+    <!-- total area  -->
+    <section class="all-Wraper">
    <!-- show point section  -->
-   <section class="show-point">
+   <header class="show-point">
     <div class="point-section">
         <div class="number-show"><h3  id="your-main">0</h3></div>
         <div class=""><h3 class="">You</h3></div>
     </div>
+   
     <div class="point-section">
         <div class="point-text"><h3>Computer</h3></div>
         <div class="number-show"><h3  id="computer-main">0</h3></div>
     </div>
-   </section>
+   </header>
  <!-- main section start here  -->
  
-   <main class="container">
+   <main class="container mb-5">
+    <h1 ><span id="who-win" class="badge bg-danger"></span></h1>
      <!-- Choosein section  -->
     <section>
     <h1 class="mt-5">Rock, Paper, or Scissors?</h1>
@@ -43,46 +42,32 @@
     <section class="show-images">
         <div class="row">
             <div class="col">
-                <h3 id="user-played">You played Rock</h3>
+                <h3 class="who-wins" id="user-played"></h3>
                 <img id="user-image" alt="">
             </div>
             <div class="col">
-                <h3 id="computer-played">Computer played Rock</h3>
+                <h3 class="who-wins" id="computer-played"></h3>
                 <img id="computer-image"  alt="">
             </div>
         </div>
-        <h1 id="who-win">You Win</h1>
-        <input id="get-value" type="range" value="0"  min="1" max="100" oninput="this.nextElementSibling.value = this.value">
-<output>0</output>
+        
+        
     </section>
-
    </main>
-<!-- modal -->
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-</button>
+   <footer>
+    <h4 id="current-level"></h4>
+    <h1>Rock, Paper, Scissors Game</h1>
+    <h4>Developed By Imros</h4>
+   </footer>
+   </section>
+   <!-- Audios  -->
+   <audio src="audio/you.wav"  id="you-audio"></audio>
+   <audio src="audio/computer.wav"  id="computer-audio"></audio>
+   <audio src="audio/win.wav"  id="win-audio"></audio>
+   <audio src="audio/lost.wav"  id="lost-audio"></audio>
+   <audio src="audio/tie.wav"  id="tie-audio"></audio>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- modal -->
-    <script src="function.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="function.js"></script>
   </body>
 </html>
