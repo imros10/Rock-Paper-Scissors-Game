@@ -195,7 +195,7 @@ function mainFunction(userInput,computerSay,power){
             winAudio.play()
             setTimeout(function (){
                
-                alert('You are The winner')
+                alert('Your are The winner')
                 location.reload();
             }, 500);
 
