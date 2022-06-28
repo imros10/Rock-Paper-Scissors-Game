@@ -1,11 +1,62 @@
     // user pints 
         let userPoint = 0;
         let computerPoint = 0;
-        const range = document.getElementById('get-value');
-        console.log(range.value)
-    document.getElementById('top-button-handle').addEventListener('click',function(event){
+        let levelGot = 0;
+        const modalWrap = document.createElement('div');
         
+        function wrapFunction(){
+            modalWrap.innerHTML=`<div class="modal" tabindex="-1">
+            <div class="modal-dialog text-center">
+              <div class="modal-content">
+                <div class="modal-header justify-content-center">
+                  <h5 class="modal-title">What would you like the winning score to be?
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                <input type="range" id="get-value" step="1"
+                  min="5" max="50"  value="0" oninput="this.nextElementSibling.value = this.value">
+                <output>5</output>
+                </div>
+                <div class="modal-footer justify-content-center">
+                  <button type="button" id="getLevelV" class="btn btn-secondary">Sumbit</button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>`;
+          document.body.appendChild(modalWrap);
+          const myModal = new bootstrap.Modal(document.querySelector('.modal'))
+          myModal.show()
+          document.getElementById('getLevelV').addEventListener('click',function (){
+            const valueGet = document.getElementById('get-value');
+            const cobertTonumber = parseInt(valueGet.value)
+            document.getElementById('current-level').innerText=cobertTonumber
+            levelGot = cobertTonumber;
+            myModal.hide()
+           
+           
+
+        })
+        }
+
+        window.onload = function(){
+            wrapFunction()
+        }
+     
+           
+           
             
+
+        
+        
+       
+        // getLevel()
+
+  /* const range = document.getElementById('get-value');
+        console.log(range.value) */
+            document.getElementById('top-button-handle').addEventListener('click',function(event){
+               
         // user input 
         const userInput =event.target.value;
         if(userInput){
@@ -43,7 +94,11 @@
         const resultArea = document.getElementById('who-win');
         const userPlayd = document.getElementById('user-played')
         const ComputerPlayd = document.getElementById('computer-played')
+        // check whan is your ppoint 
+        console.log(levelGot)
+        console.log(computerPoint)
 
+        // main game function 
         if(userInput == computerSay){
             userPlayd.innerText=`You played ${userInput}`
             ComputerPlayd.innerText=`Computer played ${computerSay}`
@@ -60,7 +115,6 @@
         }
         else if(userInput == 'rock' && computerSay == 'paper'){
             computerPoint = computerPoint + 1;
-            console.log(computerPoint)
             computerDom.innerText=computerPoint
 
             userPlayd.innerText=`You played ${userInput}`
@@ -131,5 +185,19 @@
                 userImage.setAttribute('src', `image/left ${userInput}.png`)
             computerImage.setAttribute('src', `image/right ${computerSay}.png`)
             }
-        
+            if(levelGot == userPoint){
+                setTimeout(function (){
+                    alert('Your are The winner')
+                    location.reload();
+                }, 1000);
+    
+            }
+            else if(levelGot == computerPoint){
+                setTimeout(function (){
+                    alert('Computer Winner')
+                    location.reload();
+                }, 1000);
+    
+            }     
+
     }
