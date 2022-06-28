@@ -75,43 +75,41 @@ footer{
     background: linear-gradient(166deg, rgba(131,27,197,1) 29%, rgba(74,79,222,1) 100%);
     padding: 30px 0px;
     color: white;
-    position: absolute;
-    bottom: 0px;
 }
 footer h1{
     font-size: 4rem;
 }
 .container{
-    position: relative;
-    bottom: 100px;
-    top: 100px;
+
 }
 
 /* media query  */
 @media only screen and (max-width: 678px) {
     .point-section h3{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight: 700;
+        padding: 0px;
+        margin: 0px;
         
     }
     .button-show button{
-        margin: 0px 10px;
+        margin: 0px 5px;
         border: none;
         padding: 9px 20px;
-        font-size: 1.3rem;
+        font-size: 1.1rem;
     }
     footer h1{
-        font-size: 2rem;
+        font-size: 1.6rem;
     }
     .number-show{
         border: 2px solid white;
-        padding: 4px 10px;
+        padding: 9px 15px;
         background-color: black;
         color: white;
         box-shadow: 0px 3px 10px 1px grey;
     }
     .who-wins{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .all-Wraper{
         position: relative;
@@ -122,5 +120,12 @@ footer h1{
         bottom: 10px;
         top: 10px;
     }
+    .header-text{
+        margin: 0px 15px;
+    }
+    .button-show button:hover{
+        transform:scale(1.1);
+        cursor: pointer;
+        }
   }
   
